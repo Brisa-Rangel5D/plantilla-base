@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio - Desarrollo de Plantilla Base
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Bienvenido a mi página</h2>
+<p class="lead text-center">
+    En este sitio podrás conocer sobre temas interesantes del mundo, como los animales exóticos, los vehículos antiguos
+    y las maravillas del mundo moderno. Cada sección te mostrará información, imágenes y curiosidades.
+</p>
+
+<div class="row text-center mt-5">
+    <div class="col-md-6 mb-4">
+        <img src="{{ url_for('static', filename='img/animales exoticos.jpg') }}" class="img-fluid rounded" alt="Animales Exóticos">
+        <h5 class="mt-2">Animales Exóticos</h5>
+    </div>
+    <div class="col-md-6 mb-4">
+        <img src="{{ url_for('static', filename='img/vehiculos-maravillas.jpg') }}" class="img-fluid rounded" alt="Vehículos Antiguos">
+        <h5 class="mt-2">Vehículos-maravillas</h5>
+    </div>
+</div>
+{% endblock %}

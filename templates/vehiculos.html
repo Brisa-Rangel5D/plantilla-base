@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Vehículos Antiguos{% endblock %}
+{% block content %}
+<h2>Historia de los vehículos</h2>
+<p>Los vehículos antiguos representan una época de innovación mecánica y diseño clásico.  Estos vehículos son considerados piezas de colección que representan la historia de la movilidad y, a menudo, se distinguen de los vehículos históricos  A continuación, presentamos cinco autos emblemáticos.</p>
+
+<div class="row mb-4">
+  <div class="col-md-4">
+    <img src="{{ url_for('static', filename='img/bmw.jpg') }}" class="img-fluid mb-2" alt="BMW Clásico">
+    <h5>BMW Antiguo</h5>
+    <p>BMW inició su producción automotriz en los años 20. Su modelo 328 de los años 30 fue reconocido por su desempeño en carreras. Se caracterizaba por su diseño elegante y motor de seis cilindros.</p>
+  </div>
+  <div class="col-md-4">
+    <img src="{{ url_for('static', filename='img/Audi.jpg') }}" class="img-fluid mb-2" alt="Audi Clásico">
+    <h5>Audi Clásico</h5>
+    <p>La marca Audi proviene de una fusión de cuatro fabricantes. Sus primeros autos combinaban lujo con tecnología. El diseño clásico alemán estaba presente en sus modelos antiguos.</p>
+  </div>
+  <div class="col-md-4">
+    <img src="{{ url_for('static', filename='img/nissan.jpg') }}" class="img-fluid mb-2" alt="Nissan Clásico">
+    <h5>Nissan Antiguo</h5>
+    <p>Fundada en Japón, Nissan produjo autos compactos eficientes y deportivos como el Skyline en los años 60. Su ingeniería japonesa fue clave en su expansión global.</p>
+  </div>
+</div>
+
+<div class="row mb-4">
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/vocho.jpeg') }}" class="img-fluid mb-2" alt="Volkswagen Vocho">
+    <h5>Volkswagen Vocho</h5>
+    <p>El Vocho es el icónico Volkswagen Beetle. Con motor trasero y diseño curvo, fue amado en todo el mundo. En México fue producido durante décadas y es símbolo cultural.</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/toyota.webp') }}" class="img-fluid mb-2" alt="Toyota Clásico">
+    <h5>Toyota Clásico</h5>
+    <p>Conocida por su durabilidad, Toyota lanzó modelos como el Land Cruiser en los 60. Autos confiables, resistentes y fáciles de mantener fueron clave en su éxito.</p>
+  </div>
+</div>
+{% endblock %}

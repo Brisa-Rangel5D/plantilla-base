@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+Maravillas del Mundo
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4">Las 7 Maravillas del Mundo</h2>
+
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/chichen itza.jpg') }}" class="img-fluid mb-2 rounded" alt="Chichén Itzá">
+      <h5>Chichén Itzá (México)</h5>
+      <p>Una de las más famosas ciudades mayas, conocida por su pirámide de Kukulkán. Es un símbolo de la precisión astronómica y arquitectónica de esta civilización.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/cristo redentor.jpg') }}" class="img-fluid mb-2 rounded" alt="Cristo Redentor">
+      <h5>Cristo Redentor (Brasil)</h5>
+      <p>Ubicada en Río de Janeiro, esta enorme estatua es un ícono de paz y hospitalidad. Fue inaugurada en 1931 y es una de las estructuras más reconocidas del mundo.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/machu picchu.webp') }}" class="img-fluid mb-2 rounded" alt="Machu Picchu">
+      <h5>Machu Picchu (Perú)</h5>
+      <p>Una joya del Imperio Inca, enclavada entre las montañas andinas. Es una de las obras de ingeniería y arquitectura más impresionantes del mundo antiguo.</p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/petra.jpg') }}" class="img-fluid mb-2 rounded" alt="Petra">
+      <h5>Petra (Jordania)</h5>
+      <p>Una ciudad esculpida en piedra, conocida como la “ciudad rosa”. Fue capital del reino nabateo y hoy es un Patrimonio de la Humanidad.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/taj mahal.jpg') }}" class="img-fluid mb-2 rounded" alt="Taj Mahal">
+      <h5>Taj Mahal (India)</h5>
+      <p>Un majestuoso mausoleo de mármol blanco construido por el emperador Shah Jahan en honor a su esposa Mumtaz Mahal. Es símbolo eterno del amor y una obra maestra del arte mogol.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='img/coliseo.jpg') }}" class="img-fluid mb-2 rounded" alt="Coliseo">
+      <h5>Coliseo (Italia)</h5>
+      <p>Situado en Roma, fue el anfiteatro más grande del Imperio Romano. Escenario de combates de gladiadores y símbolo de la grandeza de la antigua Roma.</p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-4 offset-md-4">
+      <img src="{{ url_for('static', filename='img/Muralla china.jpg') }}" class="img-fluid mb-2 rounded" alt="Gran Muralla China">
+      <h5>Muralla China (China)</h5>
+      <p>Una de las estructuras más extensas del mundo, construida para proteger el territorio chino de invasiones. Es un símbolo de fuerza, perseverancia y legado histórico.</p>
+    </div>
+  </div>
+
+ 
+  <div class="row mt-5">
+    <div class="col-md-8 offset-md-2 text-center">
+      <h4 class="mb-3">Video: Las 7 Maravillas del Mundo</h4>
+      <div class="card bg-dark text-white shadow">
+        <div class="card-body">
+          <video controls autoplay muted loop width="100%" class="rounded">
+            <source src="{{ url_for('static', filename='video/maravillas.mp4') }}" type="video/mp4">
+           
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

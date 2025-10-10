@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Animales Exóticos{% endblock %}
+
+{% block content %}
+<h2 class="text-center mb-4"> El maravilloso reino animal </h2>
+<p class="text-center mb-5">
+ Un animal exótico es una especie que no es nativa ni autóctona de una región específica, sino que ha sido introducida por causas humanas, ya sea de forma intencional o accidental.
+</p>
+
+<h4>Acuáticos</h4>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/tiburon anguila.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Tiburón anguila">
+    <h5>Tiburón Anguila</h5>
+    <p>
+      Este ejemplar representa la gran diversidad acuática. Los tiburones son peces cartilaginosos con varios dientes reemplazables; las anguilas son peces alargados con ciclos migratorios complejos. Algunas anguilas eléctricas pueden generar descargas para defenderse o cazar.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/ajolote.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Ajolote">
+    <h5>Ajolote (Ambystoma mexicanum)</h5>
+    <p>
+      El ajolote es un anfibio endémico de México, famoso por su capacidad de regenerar extremidades, corazón e incluso partes del cerebro. Vive en los canales de Xochimilco y conserva características juveniles durante toda su vida. Está en peligro crítico de extinción.
+    </p>
+  </div>
+</div>
+
+<h4>Terrestres</h4>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/zorro.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Zorro">
+    <h5>Zorro</h5>
+    <p>
+      Los zorros son mamíferos del grupo de los cánidos. Son adaptables, viven en distintos hábitats y su dieta incluye roedores, aves, insectos y frutos. Poseen sentidos muy desarrollados para cazar con eficiencia.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/tarsero.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Tarsero">
+    <h5>Tarsero (Tarsius spp.)</h5>
+    <p>
+      Los tarseros son primates nocturnos originarios del sudeste asiático. Tienen ojos enormes adaptados a la noche, viven en árboles y cazan insectos y pequeños vertebrados. Son extremadamente ágiles para saltar entre ramas.
+    </p>
+  </div>
+</div>
+
+<h4>Aéreos</h4>
+<div class="row mb-4">
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/murcielago.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Murciélago">
+    <h5>Murciélago</h5>
+    <p>
+      Los murciélagos son los únicos mamíferos capaces de volar activamente. Muchas especies usan la ecolocación para orientarse y cazar insectos durante la noche. Son esenciales para la polinización y el control de plagas.
+    </p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='img/sagittarius.jpg') }}" class="img-fluid rounded shadow mb-2" alt="Ave exótica">
+    <h5>sagittarius</h5>
+    <p>
+      Las aves exóticas destacan por su colorido plumaje, canto y habilidades de vuelo. Su diversidad es reflejo de la adaptación a distintos ecosistemas alrededor del mundo.
+    </p>
+  </div>
+</div>
+{% endblock %}
