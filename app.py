@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, session, redirect, url_for, flash
 
 app = Flask(__name__)
-app.secret_key = 'clave_secreta_para_flash'  
+app.secret_key = 'clave_secreta_para_flash'
+
 
 @app.route('/')
 def index():
@@ -10,6 +11,8 @@ def index():
 
 @app.route('/inicio')
 def inicio():
+    if 'usuario' not in session:
+        return redirect(url_for('iniciarsession'))
     return render_template('inicio.html')
 
 
@@ -38,24 +41,38 @@ def registro():
     if request.method == "POST":
         nombre = request.form.get("nombre")
         apellido = request.form.get("apellido")
-        dia = request.form.get("dia")
-        mes = request.form.get("mes")
-        anio = request.form.get("anio")
-        genero = request.form.get("genero")
         email = request.form.get("email")
         password = request.form.get("password")
 
-    
-        if len(password) < 8:
-            flash("La contraseña debe tener al menos 8 caracteres.")
-        elif not nombre or not apellido or not email or not password:
+        if not nombre or not apellido or not email or not password:
             flash("Por favor, completa todos los campos obligatorios.")
         else:
-            flash(f"¡Registro exitoso para {nombre} {apellido}! "
-                f"Nacido el {dia} de {mes} de {anio}, Género: {genero}, Email: {email}")
+            flash(f"¡Registro exitoso para {nombre} {apellido}! Email: {email}")
 
     return render_template('registro.html')
 
 
+@app.route('/iniciarsession', methods=['GET', 'POST'])
+def iniciarsession():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if username and password:
+            session['usuario'] = username
+            return redirect(url_for('inicio'))  
+        else:
+            flash('Por favor, completa ambos campos.')
+
+    return render_template('iniciarsession.html')
+
+
+@app.route('/logout')
+def logout():
+    session.pop('usuario', None)
+    return redirect(url_for('iniciarsession'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
